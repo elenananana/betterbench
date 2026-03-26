@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Methodology() {
   return (
-    <div className="max-w-3xl mx-auto px-4 sm:px-6 py-12">
+    <div className="max-w-3xl mx-auto px-4 sm:px-6 py-16">
       <Link
         href="/"
         className="text-xs text-muted hover:text-foreground transition-colors mb-8 inline-block"
@@ -10,9 +10,9 @@ export default function Methodology() {
         ← Back to rankings
       </Link>
 
-      <article className="space-y-8">
+      <article className="space-y-10">
         <header>
-          <h1 className="text-3xl font-bold tracking-tight mb-2">
+          <h1 className="font-serif italic text-4xl sm:text-5xl tracking-tight mb-3">
             Not All Benchmarks Are Created Equal
           </h1>
           <p className="text-muted text-sm">
@@ -52,7 +52,7 @@ export default function Methodology() {
 
         {/* The Landscape */}
         <section className="space-y-4">
-          <h2 className="text-xl font-bold tracking-tight border-b border-border pb-2">
+          <h2 className="font-serif italic text-2xl tracking-tight border-b border-border pb-2">
             How AI Benchmarks Actually Work
           </h2>
           <div className="text-sm leading-relaxed text-foreground/90 space-y-4">
@@ -113,7 +113,7 @@ export default function Methodology() {
 
         {/* Academic Foundation */}
         <section className="space-y-4">
-          <h2 className="text-xl font-bold tracking-tight border-b border-border pb-2">
+          <h2 className="font-serif italic text-2xl tracking-tight border-b border-border pb-2">
             The Academic Case for Evaluating Evaluators
           </h2>
           <div className="text-sm leading-relaxed text-foreground/90 space-y-4">
@@ -124,7 +124,7 @@ export default function Methodology() {
                 href="https://arxiv.org/html/2502.06559v2"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-accent hover:underline"
+                className="text-foreground underline underline-offset-2 hover:text-muted"
               >
                 2025 meta-review of ~100 studies
               </a>{" "}
@@ -178,7 +178,7 @@ export default function Methodology() {
 
         {/* The Problem */}
         <section className="space-y-4">
-          <h2 className="text-xl font-bold tracking-tight border-b border-border pb-2">
+          <h2 className="font-serif italic text-2xl tracking-tight border-b border-border pb-2">
             The Problem in Practice
           </h2>
           <div className="text-sm leading-relaxed text-foreground/90 space-y-4">
@@ -189,7 +189,7 @@ export default function Methodology() {
                 href="https://surgehq.ai/blog/lmarena-is-a-plague-on-ai"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-accent hover:underline"
+                className="text-foreground underline underline-offset-2 hover:text-muted"
               >
                 Surge AI&apos;s analysis
               </a>{" "}
@@ -198,7 +198,7 @@ export default function Methodology() {
               factual accuracy.
             </p>
 
-            <blockquote className="border-l-2 border-accent pl-4 py-2 text-muted italic">
+            <blockquote className="border-l-2 border-foreground pl-4 py-2 text-muted italic">
               &ldquo;The easiest way to climb the leaderboard isn&apos;t to be smarter;
               it&apos;s to hack human attention span.&rdquo;
               <span className="block text-xs mt-1 not-italic">— Surge AI</span>
@@ -226,7 +226,7 @@ export default function Methodology() {
                 href="https://www.sandraherz.com/ai-leaderboards/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-accent hover:underline"
+                className="text-foreground underline underline-offset-2 hover:text-muted"
               >
                 Sandra Herz
               </a>{" "}
@@ -238,7 +238,7 @@ export default function Methodology() {
 
         {/* Our Framework */}
         <section className="space-y-4">
-          <h2 className="text-xl font-bold tracking-tight border-b border-border pb-2">
+          <h2 className="font-serif italic text-2xl tracking-tight border-b border-border pb-2">
             Our Framework: 6 Criteria
           </h2>
           <p className="text-sm text-foreground/90 leading-relaxed">
@@ -299,11 +299,11 @@ export default function Methodology() {
                 <p className="text-sm text-muted leading-relaxed mb-3">{c.what}</p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
                   <div>
-                    <span className="text-emerald-400 font-mono">GOOD →</span>
+                    <span className="text-emerald-600 font-mono">GOOD →</span>
                     <p className="text-muted mt-1 leading-relaxed">{c.good}</p>
                   </div>
                   <div>
-                    <span className="text-red-400 font-mono">BAD →</span>
+                    <span className="text-red-600 font-mono">BAD →</span>
                     <p className="text-muted mt-1 leading-relaxed">{c.bad}</p>
                   </div>
                 </div>
@@ -314,7 +314,7 @@ export default function Methodology() {
 
         {/* Popularity */}
         <section className="space-y-4">
-          <h2 className="text-xl font-bold tracking-tight border-b border-border pb-2">
+          <h2 className="font-serif italic text-2xl tracking-tight border-b border-border pb-2">
             Popularity: The Unscored Metric
           </h2>
           <div className="text-sm leading-relaxed text-foreground/90 space-y-4">
@@ -333,7 +333,7 @@ export default function Methodology() {
 
         {/* Grading */}
         <section className="space-y-4">
-          <h2 className="text-xl font-bold tracking-tight border-b border-border pb-2">
+          <h2 className="font-serif italic text-2xl tracking-tight border-b border-border pb-2">
             How We Grade
           </h2>
           <div className="text-sm leading-relaxed text-foreground/90 space-y-4">
@@ -343,11 +343,11 @@ export default function Methodology() {
             </p>
             <div className="grid grid-cols-5 gap-2 my-4 text-center">
               {[
-                { grade: "A", range: "4.5-5.0", color: "text-emerald-400 border-emerald-400/30 bg-emerald-400/10" },
-                { grade: "B", range: "3.5-4.4", color: "text-sky-400 border-sky-400/30 bg-sky-400/10" },
-                { grade: "C", range: "2.5-3.4", color: "text-amber-400 border-amber-400/30 bg-amber-400/10" },
-                { grade: "D", range: "1.5-2.4", color: "text-orange-400 border-orange-400/30 bg-orange-400/10" },
-                { grade: "F", range: "1.0-1.4", color: "text-red-400 border-red-400/30 bg-red-400/10" },
+                { grade: "A", range: "4.5-5.0", color: "text-emerald-600 border-emerald-200 bg-emerald-50" },
+                { grade: "B", range: "3.5-4.4", color: "text-sky-600 border-sky-200 bg-sky-50" },
+                { grade: "C", range: "2.5-3.4", color: "text-amber-600 border-amber-200 bg-amber-50" },
+                { grade: "D", range: "1.5-2.4", color: "text-orange-600 border-orange-200 bg-orange-50" },
+                { grade: "F", range: "1.0-1.4", color: "text-red-600 border-red-200 bg-red-50" },
               ].map((g) => (
                 <div
                   key={g.grade}
@@ -369,7 +369,7 @@ export default function Methodology() {
 
         {/* Voting */}
         <section className="space-y-4">
-          <h2 className="text-xl font-bold tracking-tight border-b border-border pb-2">
+          <h2 className="font-serif italic text-2xl tracking-tight border-b border-border pb-2">
             How to Participate
           </h2>
           <div className="text-sm leading-relaxed text-foreground/90 space-y-4">
@@ -380,7 +380,7 @@ export default function Methodology() {
             </p>
             <p>
               <strong>Submit:</strong> Know a benchmark we&apos;re missing?{" "}
-              <Link href="/submit" className="text-accent hover:underline">
+              <Link href="/submit" className="text-foreground underline underline-offset-2 hover:text-muted">
                 Submit it for review
               </Link>
               . We&apos;ll evaluate it against our 6 criteria and add it to the
@@ -396,7 +396,7 @@ export default function Methodology() {
 
         {/* Conclusion */}
         <section className="space-y-4">
-          <h2 className="text-xl font-bold tracking-tight border-b border-border pb-2">
+          <h2 className="font-serif italic text-2xl tracking-tight border-b border-border pb-2">
             Why This Matters
           </h2>
           <div className="text-sm leading-relaxed text-foreground/90 space-y-4">
@@ -432,7 +432,7 @@ export default function Methodology() {
                 <li>Reuel et al. (2024), &ldquo;Betterbench: Assessing AI Benchmarks, Uncovering Issues, and Establishing Best Practices&rdquo; — NeurIPS Datasets &amp; Benchmarks</li>
                 <li>
                   Interdisciplinary meta-review of ~100 studies on benchmark shortcomings (2025) —{" "}
-                  <a href="https://arxiv.org/html/2502.06559v2" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">arxiv.org</a>
+                  <a href="https://arxiv.org/html/2502.06559v2" target="_blank" rel="noopener noreferrer" className="text-foreground underline underline-offset-2 hover:text-muted">arxiv.org</a>
                 </li>
                 <li>Ren et al. (2024), &ldquo;Safetywashing: Do AI Safety Benchmarks Actually Measure Safety Progress?&rdquo; — NeurIPS</li>
                 <li>Zhang et al. (2024), &ldquo;Language Model Developers Should Report Train-Test Overlap&rdquo;</li>
@@ -454,19 +454,19 @@ export default function Methodology() {
               <ul className="text-xs text-muted space-y-1.5">
                 <li>
                   Sandra Herz, &ldquo;The Leaderboard Race: How We Measure AI and Why It Matters to All of Us&rdquo; —{" "}
-                  <a href="https://www.sandraherz.com/ai-leaderboards/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">sandraherz.com</a>
+                  <a href="https://www.sandraherz.com/ai-leaderboards/" target="_blank" rel="noopener noreferrer" className="text-foreground underline underline-offset-2 hover:text-muted">sandraherz.com</a>
                 </li>
                 <li>
                   Surge AI, &ldquo;LMArena is a cancer on AI&rdquo; —{" "}
-                  <a href="https://surgehq.ai/blog/lmarena-is-a-plague-on-ai" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">surgehq.ai</a>
+                  <a href="https://surgehq.ai/blog/lmarena-is-a-plague-on-ai" target="_blank" rel="noopener noreferrer" className="text-foreground underline underline-offset-2 hover:text-muted">surgehq.ai</a>
                 </li>
                 <li>
                   Keegan (2024), &ldquo;Everyone Is Judging AI by These Tests. But Experts Say They&apos;re Close to Meaningless&rdquo; —{" "}
-                  <a href="https://themarkup.org/artificial-intelligence/2024/07/17/everyone-is-judging-ai-by-these-tests-but-experts-say-theyre-close-to-meaningless" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">The Markup</a>
+                  <a href="https://themarkup.org/artificial-intelligence/2024/07/17/everyone-is-judging-ai-by-these-tests-but-experts-say-theyre-close-to-meaningless" target="_blank" rel="noopener noreferrer" className="text-foreground underline underline-offset-2 hover:text-muted">The Markup</a>
                 </li>
                 <li>
                   Roose (2024), &ldquo;A.I. Has a Measurement Problem&rdquo; —{" "}
-                  <a href="https://www.nytimes.com/2024/04/15/technology/ai-models-measurement.html" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">New York Times</a>
+                  <a href="https://www.nytimes.com/2024/04/15/technology/ai-models-measurement.html" target="_blank" rel="noopener noreferrer" className="text-foreground underline underline-offset-2 hover:text-muted">New York Times</a>
                 </li>
               </ul>
             </div>

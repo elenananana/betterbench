@@ -29,7 +29,7 @@ export default function Submit() {
     return (
       <div className="max-w-xl mx-auto px-4 sm:px-6 py-24 text-center">
         <div className="text-4xl mb-4">&#10003;</div>
-        <h1 className="text-2xl font-bold tracking-tight mb-2">
+        <h1 className="font-serif italic text-2xl mb-2">
           Benchmark submitted
         </h1>
         <p className="text-muted text-sm mb-6">
@@ -38,7 +38,7 @@ export default function Submit() {
         </p>
         <Link
           href="/"
-          className="text-sm px-4 py-2 rounded border border-accent text-accent hover:bg-accent-dim transition-colors"
+          className="text-sm px-5 py-2.5 rounded-md bg-foreground text-background font-medium hover:bg-foreground/85 transition-colors"
         >
           Back to rankings
         </Link>
@@ -47,7 +47,7 @@ export default function Submit() {
   }
 
   return (
-    <div className="max-w-xl mx-auto px-4 sm:px-6 py-12">
+    <div className="max-w-xl mx-auto px-4 sm:px-6 py-16">
       <Link
         href="/"
         className="text-xs text-muted hover:text-foreground transition-colors mb-8 inline-block"
@@ -55,13 +55,13 @@ export default function Submit() {
         ← Back to rankings
       </Link>
 
-      <h1 className="text-2xl font-bold tracking-tight mb-2">
+      <h1 className="font-serif italic text-3xl tracking-tight mb-2">
         Submit a Benchmark
       </h1>
       <p className="text-muted text-sm mb-8">
         Know a benchmark or leaderboard we&apos;re missing? Submit it for review.
         We&apos;ll evaluate it against our{" "}
-        <Link href="/methodology" className="text-accent hover:underline">
+        <Link href="/methodology" className="text-foreground underline underline-offset-2 hover:text-muted">
           6 criteria
         </Link>{" "}
         and add it to the rankings.
@@ -80,7 +80,7 @@ export default function Submit() {
               setFormData({ ...formData, benchmarkName: e.target.value })
             }
             placeholder="e.g., SWE-Bench, LMArena, GPQA"
-            className="w-full px-3 py-2 rounded border border-border bg-surface text-foreground text-sm placeholder:text-muted/50 focus:outline-none focus:border-accent transition-colors"
+            className="w-full px-3 py-2 rounded-md border border-border bg-surface text-foreground text-sm placeholder:text-muted/50 focus:outline-none focus:border-foreground/40 transition-colors"
           />
         </div>
 
@@ -94,7 +94,7 @@ export default function Submit() {
               setFormData({ ...formData, url: e.target.value })
             }
             placeholder="https://..."
-            className="w-full px-3 py-2 rounded border border-border bg-surface text-foreground text-sm placeholder:text-muted/50 focus:outline-none focus:border-accent transition-colors"
+            className="w-full px-3 py-2 rounded-md border border-border bg-surface text-foreground text-sm placeholder:text-muted/50 focus:outline-none focus:border-foreground/40 transition-colors"
           />
         </div>
 
@@ -110,7 +110,7 @@ export default function Submit() {
               setFormData({ ...formData, description: e.target.value })
             }
             placeholder="What does this benchmark measure? Who runs it? What methodology does it use?"
-            className="w-full px-3 py-2 rounded border border-border bg-surface text-foreground text-sm placeholder:text-muted/50 focus:outline-none focus:border-accent transition-colors resize-none"
+            className="w-full px-3 py-2 rounded-md border border-border bg-surface text-foreground text-sm placeholder:text-muted/50 focus:outline-none focus:border-foreground/40 transition-colors resize-none"
           />
         </div>
 
@@ -126,7 +126,7 @@ export default function Submit() {
               setFormData({ ...formData, whyInclude: e.target.value })
             }
             placeholder="Why is this benchmark noteworthy? What gap does it fill? Any known strengths or weaknesses?"
-            className="w-full px-3 py-2 rounded border border-border bg-surface text-foreground text-sm placeholder:text-muted/50 focus:outline-none focus:border-accent transition-colors resize-none"
+            className="w-full px-3 py-2 rounded-md border border-border bg-surface text-foreground text-sm placeholder:text-muted/50 focus:outline-none focus:border-foreground/40 transition-colors resize-none"
           />
         </div>
 
@@ -141,13 +141,13 @@ export default function Submit() {
               setFormData({ ...formData, submitterEmail: e.target.value })
             }
             placeholder="In case we have questions"
-            className="w-full px-3 py-2 rounded border border-border bg-surface text-foreground text-sm placeholder:text-muted/50 focus:outline-none focus:border-accent transition-colors"
+            className="w-full px-3 py-2 rounded-md border border-border bg-surface text-foreground text-sm placeholder:text-muted/50 focus:outline-none focus:border-foreground/40 transition-colors"
           />
         </div>
 
         <button
           type="submit"
-          className="w-full py-2.5 rounded border border-accent text-accent font-medium text-sm hover:bg-accent-dim transition-colors cursor-pointer"
+          className="w-full py-2.5 rounded-md bg-foreground text-background font-medium text-sm hover:bg-foreground/85 transition-colors cursor-pointer"
         >
           Submit for review
         </button>

@@ -53,9 +53,9 @@ function VoterRegistrationModal({ onComplete, onClose }: { onComplete: () => voi
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm">
-      <div className="w-full max-w-md mx-4 border border-border rounded-lg bg-background p-6 shadow-2xl">
-        <h3 className="text-lg font-bold tracking-tight mb-1">Register to vote</h3>
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm">
+      <div className="w-full max-w-md mx-4 border border-border rounded-lg bg-surface p-6 shadow-xl">
+        <h3 className="font-serif italic text-xl mb-1">Register to vote</h3>
         <p className="text-sm text-muted mb-5">
           To keep votes meaningful, we ask for a bit of context. Your info is stored locally and never shared.
         </p>
@@ -91,11 +91,11 @@ function VoterRegistrationModal({ onComplete, onClose }: { onComplete: () => voi
               <option value="Other">Other</option>
             </select>
           </div>
-          {error && <p className="text-xs text-red-400">{error}</p>}
+          {error && <p className="text-xs text-red-600">{error}</p>}
           <div className="flex gap-3">
             <button
               type="submit"
-              className="flex-1 py-2 rounded border border-accent text-accent font-medium text-sm hover:bg-accent-dim transition-colors cursor-pointer"
+              className="flex-1 py-2 rounded-md bg-foreground text-background font-medium text-sm hover:bg-foreground/85 transition-colors cursor-pointer"
             >
               Register & vote
             </button>
@@ -152,8 +152,8 @@ function VoteButtons({ id, onRequireRegistration }: { id: string; onRequireRegis
         onClick={() => vote("up")}
         className={`px-1.5 py-0.5 rounded text-xs transition-colors cursor-pointer ${
           state.voted === "up"
-            ? "bg-emerald-400/20 text-emerald-400"
-            : "text-muted hover:text-emerald-400 hover:bg-emerald-400/10"
+            ? "bg-emerald-100 text-emerald-700"
+            : "text-muted hover:text-emerald-700 hover:bg-emerald-50"
         }`}
         title="Score is fair"
       >
@@ -163,8 +163,8 @@ function VoteButtons({ id, onRequireRegistration }: { id: string; onRequireRegis
         onClick={() => vote("down")}
         className={`px-1.5 py-0.5 rounded text-xs transition-colors cursor-pointer ${
           state.voted === "down"
-            ? "bg-red-400/20 text-red-400"
-            : "text-muted hover:text-red-400 hover:bg-red-400/10"
+            ? "bg-red-100 text-red-700"
+            : "text-muted hover:text-red-700 hover:bg-red-50"
         }`}
         title="Score is unfair"
       >
@@ -183,7 +183,7 @@ function ScoreCell({ score }: { score: number }) {
       <div className="mt-1 h-1 w-full bg-border rounded-full overflow-hidden">
         <div
           className={`score-bar h-full rounded-full ${
-            score >= 4 ? "bg-emerald-400/60" : score >= 3 ? "bg-amber-400/60" : "bg-red-400/60"
+            score >= 4 ? "bg-emerald-500" : score >= 3 ? "bg-amber-400" : "bg-red-400"
           }`}
           style={{ width: `${(score / 5) * 100}%` }}
         />

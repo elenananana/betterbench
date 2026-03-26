@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Instrument_Serif } from "next/font/google";
 import Link from "next/link";
 import "./globals.css";
 
@@ -11,6 +12,12 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const instrumentSerif = Instrument_Serif({
+  variable: "--font-instrument-serif",
+  subsets: ["latin"],
+  weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -27,13 +34,13 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${instrumentSerif.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <nav className="border-b border-border sticky top-0 z-50 bg-background/80 backdrop-blur-md">
+        <nav className="border-b border-border sticky top-0 z-50 bg-background/90 backdrop-blur-md">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
             <Link href="/" className="flex items-center gap-2 group">
-              <span className="text-accent font-mono text-lg font-bold tracking-tight">
+              <span className="font-serif text-xl italic text-foreground">
                 BetterBench
               </span>
               <span className="text-muted text-xs hidden sm:inline font-mono">
@@ -68,7 +75,7 @@ export default function RootLayout({
         <footer className="border-t border-border mt-auto">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted">
             <p>
-              BetterBench — Rating the raters since 2026
+              BetterBench — Rating the raters since 2025
             </p>
             <p>
               Built by{" "}
@@ -76,7 +83,7 @@ export default function RootLayout({
                 href="https://sandraherz.com/ai-leaderboards/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-accent hover:underline"
+                className="text-foreground hover:underline"
               >
                 humans who read the fine print
               </a>

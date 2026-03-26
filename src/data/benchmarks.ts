@@ -73,32 +73,32 @@ export function getAverage(scores: Benchmark["scores"]): number {
 
 export function getGradeColor(grade: string): string {
   switch (grade) {
-    case "A": return "text-emerald-400";
-    case "B": return "text-sky-400";
-    case "C": return "text-amber-400";
-    case "D": return "text-orange-400";
-    case "F": return "text-red-400";
-    default: return "text-neutral-400";
+    case "A": return "text-emerald-600";
+    case "B": return "text-sky-600";
+    case "C": return "text-amber-600";
+    case "D": return "text-orange-600";
+    case "F": return "text-red-600";
+    default: return "text-neutral-500";
   }
 }
 
 export function getGradeBg(grade: string): string {
   switch (grade) {
-    case "A": return "bg-emerald-400/10 border-emerald-400/30";
-    case "B": return "bg-sky-400/10 border-sky-400/30";
-    case "C": return "bg-amber-400/10 border-amber-400/30";
-    case "D": return "bg-orange-400/10 border-orange-400/30";
-    case "F": return "bg-red-400/10 border-red-400/30";
-    default: return "bg-neutral-400/10 border-neutral-400/30";
+    case "A": return "bg-emerald-50 border-emerald-200";
+    case "B": return "bg-sky-50 border-sky-200";
+    case "C": return "bg-amber-50 border-amber-200";
+    case "D": return "bg-orange-50 border-orange-200";
+    case "F": return "bg-red-50 border-red-200";
+    default: return "bg-neutral-50 border-neutral-200";
   }
 }
 
 export function getScoreColor(score: number): string {
-  if (score >= 5) return "text-emerald-400";
-  if (score >= 4) return "text-sky-400";
-  if (score >= 3) return "text-amber-400";
-  if (score >= 2) return "text-orange-400";
-  return "text-red-400";
+  if (score >= 5) return "text-emerald-600";
+  if (score >= 4) return "text-sky-600";
+  if (score >= 3) return "text-amber-600";
+  if (score >= 2) return "text-orange-600";
+  return "text-red-600";
 }
 
 export const benchmarks: Benchmark[] = [
