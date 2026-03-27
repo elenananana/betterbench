@@ -21,7 +21,7 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  title: "BetterBench — Not all benchmarks are created equal",
+  title: "Leaderboard Leaderboard — Not all benchmarks are created equal",
   description:
     "Rate and compare AI benchmarks and leaderboards. Editorial scores across 6 quality criteria, community voting, and transparent methodology.",
 };
@@ -40,11 +40,9 @@ export default function RootLayout({
         <nav className="border-b border-border sticky top-0 z-50 bg-background/90 backdrop-blur-md">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
             <Link href="/" className="flex items-center gap-2 group">
-              <span className="font-serif text-xl italic text-foreground">
-                BetterBench
-              </span>
-              <span className="text-muted text-xs hidden sm:inline font-mono">
-                v0.1
+              <span className="text-xl font-semibold tracking-tight">
+                <span className="text-foreground">LB</span>
+                <span className="text-muted">LB</span>
               </span>
             </Link>
             <div className="flex items-center gap-6 text-sm">
@@ -75,12 +73,12 @@ export default function RootLayout({
         <footer className="border-t border-border mt-auto">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted">
             <p>
-              BetterBench — Rating the raters since 2025
+              LBLB — Quis tabulas ipsas custodit?
             </p>
             <p>
               Built by{" "}
               <a
-                href="https://sandraherz.com/ai-leaderboards/"
+                href="https://elenagiralt.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-foreground hover:underline"

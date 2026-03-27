@@ -6,14 +6,14 @@ export default function Home() {
     <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16">
       {/* Hero */}
       <div className="mb-14">
-        <h1 className="font-serif italic text-4xl sm:text-5xl tracking-tight mb-4">
-          Not all benchmarks are{" "}
-          <span className="underline decoration-1 underline-offset-4">created equal.</span>
+        <h1 className="text-4xl sm:text-5xl tracking-tight mb-4 font-semibold">
+          <span className="text-foreground">Leaderboard</span>{" "}
+          <span className="text-muted">Leaderboard</span>
         </h1>
         <p className="text-muted text-base sm:text-lg max-w-2xl leading-relaxed">
           AI benchmarks and leaderboards shape which models get funding, adoption, and
-          your attention. But who evaluates the evaluators? We score them across 6 quality
-          criteria so you know which rankings to trust.
+          your attention. We score them across 6 quality criteria so you know which
+          rankings to trust.
         </p>
         <div className="flex gap-3 mt-6">
           <Link
@@ -29,6 +29,9 @@ export default function Home() {
             Submit a benchmark
           </Link>
         </div>
+        <p className="text-xs text-muted mt-3">
+          Note: evaluations are AI generated, may include errors.
+        </p>
       </div>
 
       {/* Table */}

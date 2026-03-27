@@ -12,6 +12,9 @@ export default function Methodology() {
 
       <article className="space-y-10">
         <header>
+          <p className="text-xs text-muted mb-4">
+            Note: evaluations are AI generated, may include errors.
+          </p>
           <h1 className="font-serif italic text-4xl sm:text-5xl tracking-tight mb-3">
             Not All Benchmarks Are Created Equal
           </h1>
@@ -42,7 +45,7 @@ export default function Methodology() {
             to tell the difference — until now.
           </p>
           <p>
-            BetterBench doesn&apos;t propose one benchmark to rule them all. Different
+            Leaderboard Leaderboard doesn&apos;t propose one benchmark to rule them all. Different
             benchmarks serve different purposes. What we propose is a way to{" "}
             <strong className="text-accent">evaluate the evaluators</strong> — a
             transparent framework for assessing the quality of AI benchmarks
@@ -171,7 +174,7 @@ export default function Methodology() {
               As the researchers conclude: &ldquo;AI benchmarks need to be subjected to
               the same demands concerning transparency, fairness, and explainability as
               algorithmic systems and AI models writ large.&rdquo; That&apos;s what
-              BetterBench aims to do.
+              Leaderboard Leaderboard aims to do.
             </p>
           </div>
         </section>
